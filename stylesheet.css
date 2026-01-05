@@ -140,3 +140,8 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+.under-construction {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
