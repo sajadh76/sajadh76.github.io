@@ -16,10 +16,11 @@
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#">Sajad Hamzenejadi</a>
+      <a class="brand" href="#about">Sajad Hamzenejadi</a>
       <div class="links">
         <a href="#about">About</a>
         <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <button id="theme" aria-label="Toggle dark mode">◐</button>
       </div>
@@ -27,7 +28,7 @@
   </nav>
 
   <main class="wrap">
-    <section id="about" class="hero">
+    <section id="about" class="tab hero">
       <div class="hero-text">
         <h1>Sajad Hamzenejadi</h1>
         <p class="role">PhD Student · Information Systems · University of Geneva</p>
@@ -54,7 +55,7 @@
       <img class="portrait" src="images/SH.png" alt="Portrait of Sajad Hamzenejadi">
     </section>
 
-    <section id="publications">
+    <section id="publications" class="tab">
       <h2>Publications</h2>
       <p class="note">For the most up-to-date list, see my <a href="https://scholar.google.com/citations?user=KvSyQNEAAAAJ&hl=en">Google Scholar</a> profile.</p>
 
@@ -113,12 +114,19 @@
       </article>
     </section>
 
-    <section id="experience">
-      <h2>Experience &amp; Education</h2>
+    <section id="education" class="tab">
+      <h2>Education</h2>
       <ul class="timeline">
-        <li><span class="when">Present</span><div><strong>PhD Student, Information Systems</strong><br>University of Geneva, Switzerland</div></li>
+        <li><span class="when">Present</span><div><strong>PhD in Information Systems</strong><br>University of Geneva (UNIGE), Switzerland</div></li>
+        <li><span class="when">Completed</span><div><strong>MSc in Telecommunications Engineering</strong><br>Politecnico di Milano, Italy</div></li>
+      </ul>
+    </section>
+
+    <section id="experience" class="tab">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li><span class="when">Present</span><div><strong>PhD Researcher</strong><br>University of Geneva, Switzerland</div></li>
         <li><span class="when">Previously</span><div><strong>Research Intern</strong><br>Nokia Bell Labs, Paris, France</div></li>
-        <li><span class="when">Previously</span><div><strong>MSc, Telecommunications Engineering</strong><br>Politecnico di Milano, Italy</div></li>
       </ul>
     </section>
   </main>
@@ -126,6 +134,15 @@
   <footer class="wrap">© <span id="y"></span> Sajad Hamzenejadi</footer>
 
   <script>
+    const tabs = ['about', 'publications', 'education', 'experience'];
+    function showTab() {
+      const id = tabs.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about';
+      document.querySelectorAll('.tab').forEach(s => s.hidden = s.id !== id);
+      document.querySelectorAll('.links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      window.scrollTo(0, 0);
+    }
+    addEventListener('hashchange', showTab);
+    showTab();
     document.getElementById('y').textContent = new Date().getFullYear();
     const root = document.documentElement;
     try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}

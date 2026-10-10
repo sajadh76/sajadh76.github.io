@@ -29,6 +29,10 @@ a:hover { text-decoration: underline; }
 .links { display: flex; gap: 20px; align-items: center; }
 .links a { color: var(--muted); font-size: 15px; }
 .links a:hover { color: var(--fg); text-decoration: none; }
+.links a.active { color: var(--accent); font-weight: 600; box-shadow: inset 0 -2px 0 var(--accent); padding: 16px 0 14px; }
+.tab { min-height: 60vh; }
+.tab > h2:first-child { margin-top: 40px; }
+.hero[hidden] { display: none; }
 #theme { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 6px; cursor: pointer; padding: 2px 8px; }
 
 h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; }
@@ -66,7 +70,10 @@ footer { color: var(--muted); font-size: 13px; padding: 48px 20px; text-align: c
   .hero { flex-direction: column-reverse; text-align: center; padding-top: 32px; }
   .contact { justify-content: center; }
   .portrait { width: 160px; height: 160px; }
-  .links a { display: none; }
+  .nav-inner { height: auto; flex-direction: column; padding: 10px 16px 0; gap: 4px; }
+  .links { gap: 14px; overflow-x: auto; max-width: 100%; }
+  .links a { font-size: 14px; white-space: nowrap; }
+  .links a.active { padding: 8px 0 8px; }
   .pub, .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .thumb { display: none; }
 }
