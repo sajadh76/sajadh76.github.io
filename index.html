@@ -20,10 +20,6 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#about">Sajad Hamzenejadi</a>
       <div class="links">
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
         <button id="theme" aria-label="Toggle dark mode">◐</button>
       </div>
     </div>
@@ -31,6 +27,11 @@
 
   <main class="wrap">
     <section id="about" class="tab hero">
+      <nav class="rail" aria-label="Sections">
+        <a href="#publications"><i class="fa-solid fa-book-open"></i><span>Publications</span></a>
+        <a href="#education"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+        <a href="#experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a>
+      </nav>
       <div class="hero-text">
         <h1>Sajad Hamzenejadi</h1>
         <p class="role">Doctoral Student · University of Geneva</p>
@@ -69,6 +70,7 @@
     </section>
 
     <section id="publications" class="tab">
+      <a class="back" href="#about"><i class="fa-solid fa-arrow-left"></i> Home</a>
       <h2>Publications</h2>
       <p class="note">For the most up-to-date list, see my <a href="https://scholar.google.com/citations?user=KvSyQNEAAAAJ&hl=en">Google Scholar</a> profile.</p>
 
@@ -108,6 +110,7 @@
     </section>
 
     <section id="education" class="tab">
+      <a class="back" href="#about"><i class="fa-solid fa-arrow-left"></i> Home</a>
       <h2>Education</h2>
       <!-- Logos: add images/logos/unige.webp, polimi.png, bell-labs.webp (square, ~200px). Until then initials are shown. -->
       <ul class="timeline">
@@ -125,6 +128,7 @@
     </section>
 
     <section id="experience" class="tab">
+      <a class="back" href="#about"><i class="fa-solid fa-arrow-left"></i> Home</a>
       <h2>Experience</h2>
       <ul class="timeline">
         <li><span class="logo"><img src="images/unige.webp" alt="" onerror="this.remove()"><span>UNIGE</span></span><div>
@@ -149,7 +153,6 @@
       const id = tabs.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about';
       document.querySelectorAll('.tab').forEach(s => s.hidden = s.id !== id);
       document.getElementById('news').hidden = id !== 'about';
-      document.querySelectorAll('.links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
       window.scrollTo(0, 0);
     }
     addEventListener('hashchange', showTab);
