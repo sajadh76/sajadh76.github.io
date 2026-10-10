@@ -53,20 +53,22 @@
 
         <div class="block news">
           <span class="caps">News</span>
-          <!-- Newest first. -->
+          <!-- Newest first. The list scrolls once it grows beyond about five items. -->
+          <div class="news-list">
           <div class="row"><span>Sep 2026</span><span>Started my second research internship at Nokia Bell Labs.</span></div>
           <div class="row"><span>Dec 2024</span><span>Started my PhD in Information Systems at the University of Geneva.</span></div>
           <div class="row"><span>Oct 2024</span><span>Graduated with an MSc in Telecommunications Engineering from Politecnico di Milano.</span></div>
           <div class="row"><span>Sep 2023</span><span>Joined Nokia Bell Labs as a machine learning research intern.</span></div>
+          </div>
         </div>
 
         <div class="block">
           <span class="caps">Affiliations</span>
           <div class="logos">
-            <a href="https://www.unige.ch/en/" title="University of Geneva"><img src="../images/unige.webp" alt="University of Geneva"></a>
-            <a href="https://www.bell-labs.com/" title="Nokia Bell Labs"><img src="../images/bell-labs.webp" alt="Nokia Bell Labs"></a>
-            <a href="https://www.polimi.it/" title="Politecnico di Milano"><img src="../images/polimi.png" alt="Politecnico di Milano"></a>
-            <a href="https://www.universite-lyon.fr/" title="University of Lyon"><img src="../images/lyon.webp" alt="University of Lyon"></a>
+            <a href="https://www.unige.ch/en/" title="University of Geneva"><img class="lg-unige" src="../images/unige.webp" alt="University of Geneva"></a>
+            <a href="https://www.bell-labs.com/" title="Nokia Bell Labs"><img class="lg-bell" src="../images/bell-labs.webp" alt="Nokia Bell Labs"></a>
+            <a href="https://www.polimi.it/" title="Politecnico di Milano"><img class="lg-polimi" src="../images/polimi.png" alt="Politecnico di Milano"></a>
+            <a href="https://www.universite-lyon.fr/" title="University of Lyon"><img class="lg-lyon" src="../images/lyon.webp" alt="University of Lyon"></a>
           </div>
         </div>
       </section>
@@ -108,7 +110,7 @@
       <section id="education" class="page" hidden>
         <h2>Education</h2>
         <div class="entry">
-          <img src="../images/unige.webp" alt="University of Geneva">
+          <img class="lg-unige" src="../images/unige.webp" alt="University of Geneva">
           <div>
             <div class="row"><h3>PhD in Information Systems</h3><span class="when">Dec 2024 – present</span></div>
             <div class="where">University of Geneva, Switzerland</div>
@@ -116,18 +118,19 @@
           </div>
         </div>
         <div class="entry">
-          <img src="../images/polimi.png" alt="Politecnico di Milano">
+          <img class="lg-lyon" src="../images/lyon.webp" alt="University of Lyon">
+          <div>
+            <div class="row"><h3>MSc in Telecommunications Engineering</h3><span class="when">Sep 2022 – Feb 2023</span></div>
+            <div class="where">University of Lyon, France</div>
+            <p>Exchange student.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <img class="lg-polimi" src="../images/polimi.png" alt="Politecnico di Milano">
           <div>
             <div class="row"><h3>MSc in Telecommunications Engineering</h3><span class="when">Sep 2021 – Oct 2024</span></div>
             <div class="where">Politecnico di Milano, Italy</div>
             <p>Thesis: <em>Thesis title</em>.</p>
-          </div>
-        </div>
-        <div class="entry">
-          <img src="../images/lyon.webp" alt="University of Lyon">
-          <div>
-            <div class="row"><h3>Exchange Student</h3><span class="when">Sep 2022 – Feb 2023</span></div>
-            <div class="where">University of Lyon, France</div>
           </div>
         </div>
       </section>
@@ -136,15 +139,7 @@
       <section id="experience" class="page" hidden>
         <h2>Experience</h2>
         <div class="entry">
-          <img src="../images/bell-labs.webp" alt="Nokia Bell Labs">
-          <div>
-            <div class="row"><h3>Machine Learning Research Intern</h3><span class="when">Sep 2026 – Dec 2026</span></div>
-            <div class="where">Nokia Bell Labs</div>
-            <p>Team / project: <em>one-line description of what you work on</em>.</p>
-          </div>
-        </div>
-        <div class="entry">
-          <img src="../images/unige.webp" alt="University of Geneva">
+          <img class="lg-unige" src="../images/unige.webp" alt="University of Geneva">
           <div>
             <div class="row"><h3>Doctoral Researcher</h3><span class="when">Dec 2024 – present</span></div>
             <div class="where">University of Geneva, Switzerland</div>
@@ -152,7 +147,15 @@
           </div>
         </div>
         <div class="entry">
-          <img src="../images/bell-labs.webp" alt="Nokia Bell Labs">
+          <img class="lg-bell" src="../images/bell-labs.webp" alt="Nokia Bell Labs">
+          <div>
+            <div class="row"><h3>Machine Learning Research Intern</h3><span class="when">Sep 2026 – Dec 2026</span></div>
+            <div class="where">Nokia Bell Labs</div>
+            <p>Team / project: <em>one-line description of what you work on</em>.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <img class="lg-bell" src="../images/bell-labs.webp" alt="Nokia Bell Labs">
           <div>
             <div class="row"><h3>Machine Learning Research Intern</h3><span class="when">Sep 2023 – Feb 2024</span></div>
             <div class="where">Nokia Bell Labs</div>
