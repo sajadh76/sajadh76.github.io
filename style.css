@@ -157,10 +157,10 @@ body, .side, .tools a, .tools button { transition: background-color .35s, color 
   border: 1px solid var(--line); background: transparent; color: var(--fg2); transition: .25s; }
 .filters button:hover { border-color: var(--gold); color: var(--gold); }
 .filters button.on { background: var(--gold); border-color: var(--gold); color: var(--bg); }
-.certs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 28px; }
+.certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px 22px; }
 .cert { margin: 0; }
 .cert[hidden] { display: none; }
-.cert .frame { display: block; width: 100%; aspect-ratio: 4 / 3; padding: 12px; cursor: zoom-in; position: relative;
+.cert .frame { display: block; width: 100%; aspect-ratio: 4 / 3; padding: 10px; cursor: zoom-in; position: relative;
   background: #FBF8F1; border: 1px solid var(--gold); outline: 1px solid var(--gold); outline-offset: -7px;
   box-shadow: 0 10px 26px -18px rgba(20, 48, 42, .55); transition: transform .3s, box-shadow .3s; }
 .cert .frame::before, .cert .frame::after { content: "◆"; position: absolute; left: 50%; transform: translateX(-50%);
@@ -170,7 +170,7 @@ body, .side, .tools a, .tools button { transition: background-color .35s, color 
 .cert .frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .cert .frame:hover { transform: translateY(-3px); box-shadow: 0 18px 32px -18px rgba(20, 48, 42, .6); }
 .cert figcaption { margin-top: 14px; text-align: center; }
-.cert .ct { display: block; font-weight: 500; color: var(--fg); line-height: 1.4; }
+.cert .ct { display: block; font-weight: 500; font-size: 15px; color: var(--fg); line-height: 1.4; }
 .cert .cm { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
 
 .lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(8, 18, 15, .86); display: grid; place-items: center;
@@ -186,6 +186,9 @@ body, .side, .tools a, .tools button { transition: background-color .35s, color 
 .lightbox .btn:hover { background: var(--gold-light); color: #0A1511; }
 :root[data-theme="dark"] .cert .frame { background: #F4EFE4; }
 
+@media (max-width: 1100px) {
+  .certs { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
   .certs { grid-template-columns: 1fr; }
   .lightbox { padding: 14px; }
