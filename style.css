@@ -54,7 +54,7 @@ p { margin: 0 0 16px; }
 .link { border-bottom: 1px solid var(--underline); transition: border-color .25s; }
 .link:hover { border-color: var(--gold); }
 .block { margin-top: 46px; }
-.block .caps { display: block; margin-bottom: 12px; font-size: 13.5px; letter-spacing: .28em; }
+.block .caps { display: block; margin-bottom: 14px; font-size: 15.5px; letter-spacing: .24em; }
 
 .news-list { max-height: 290px; overflow-y: auto; border-bottom: 1px solid var(--line); padding-right: 10px;
   scrollbar-width: thin; scrollbar-color: var(--gold-light) transparent; }
