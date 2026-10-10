@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -45,13 +47,25 @@
           Recently, I have also started exploring <strong>federated foundation models</strong>, their security, and optimization.
         </p>
         <ul class="contact">
-          <li><a href="mailto:sajad.hamzenejadi@unige.ch">Email</a></li>
-          <li><a href="https://scholar.google.com/citations?user=KvSyQNEAAAAJ&hl=en">Google Scholar</a></li>
-          <li><a href="https://github.com/sajadh76">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/sajadh76/">LinkedIn</a></li>
+          <li><a href="mailto:sajad.hamzenejadi@unige.ch"><i class="fa-solid fa-envelope"></i> Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=KvSyQNEAAAAJ&hl=en"><i class="ai ai-google-scholar"></i> Scholar</a></li>
+          <li><a href="https://github.com/sajadh76"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/sajadh76/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+          <!-- Upload your CV as cv.pdf in the repo root; the button appears automatically once it exists. -->
+          <li id="cv-item" hidden><a href="cv.pdf"><i class="fa-solid fa-file-lines"></i> CV</a></li>
         </ul>
       </div>
       <img class="portrait" src="images/Sajad Hamzenejadi.jpg" alt="Portrait of Sajad Hamzenejadi">
+    </section>
+
+    <section id="news" class="news">
+      <h2>News</h2>
+      <!-- Placeholder items: replace with real dated news, newest first. -->
+      <ul>
+        <li><span class="when">MMM YYYY</span> Started my PhD in Information Systems at the University of Geneva.</li>
+        <li><span class="when">MMM YYYY</span> Joined Nokia Bell Labs as a machine learning research intern.</li>
+        <li><span class="when">MMM YYYY</span> Graduated with an MSc in Telecommunications Engineering from Politecnico di Milano.</li>
+      </ul>
     </section>
 
     <section id="publications" class="tab">
@@ -95,17 +109,34 @@
 
     <section id="education" class="tab">
       <h2>Education</h2>
+      <!-- Logos: add images/logos/unige.png, polimi.png, bell-labs.png (square, ~200px). Until then initials are shown. -->
       <ul class="timeline">
-        <li><span class="when">Present</span><div><strong>PhD in Information Systems</strong><br>University of Geneva (UNIGE), Switzerland</div></li>
-        <li><span class="when">Completed</span><div><strong>MSc in Telecommunications Engineering</strong><br>Politecnico di Milano, Italy</div></li>
+        <li><span class="logo"><img src="images/logos/unige.png" alt="" onerror="this.remove()"><span>UNIGE</span></span><div>
+          <div class="row"><strong>PhD in Information Systems</strong><span class="when">YYYY – present</span></div>
+          <div class="where">University of Geneva (UNIGE), Switzerland</div>
+          <p class="desc">Advisor: <em>Name</em> · Topic: privacy-preserving and federated learning.</p>
+        </div></li>
+        <li><span class="logo"><img src="images/logos/polimi.png" alt="" onerror="this.remove()"><span>PoliMi</span></span><div>
+          <div class="row"><strong>MSc in Telecommunications Engineering</strong><span class="when">YYYY – YYYY</span></div>
+          <div class="where">Politecnico di Milano, Italy</div>
+          <p class="desc">Thesis: <em>Thesis title</em>.</p>
+        </div></li>
       </ul>
     </section>
 
     <section id="experience" class="tab">
       <h2>Experience</h2>
       <ul class="timeline">
-        <li><span class="when">Present</span><div><strong>PhD Researcher</strong><br>University of Geneva, Switzerland</div></li>
-        <li><span class="when">Previously</span><div><strong>Research Intern</strong><br>Nokia Bell Labs, Paris, France</div></li>
+        <li><span class="logo"><img src="images/logos/unige.png" alt="" onerror="this.remove()"><span>UNIGE</span></span><div>
+          <div class="row"><strong>Doctoral Researcher</strong><span class="when">YYYY – present</span></div>
+          <div class="where">University of Geneva, Switzerland</div>
+          <p class="desc">Research on privacy-preserving machine learning, federated learning and federated foundation models.</p>
+        </div></li>
+        <li><span class="logo"><img src="images/logos/bell-labs.png" alt="" onerror="this.remove()"><span>Bell Labs</span></span><div>
+          <div class="row"><strong>Machine Learning Research Intern</strong><span class="when">MMM YYYY – MMM YYYY</span></div>
+          <div class="where">Nokia Bell Labs, Belgium &amp; France</div>
+          <p class="desc">Team / project: <em>one-line description of what you worked on</em>.</p>
+        </div></li>
       </ul>
     </section>
   </main>
@@ -117,11 +148,13 @@
     function showTab() {
       const id = tabs.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about';
       document.querySelectorAll('.tab').forEach(s => s.hidden = s.id !== id);
+      document.getElementById('news').hidden = id !== 'about';
       document.querySelectorAll('.links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
       window.scrollTo(0, 0);
     }
     addEventListener('hashchange', showTab);
     showTab();
+    fetch('cv.pdf', { method: 'HEAD' }).then(r => { if (r.ok) document.getElementById('cv-item').hidden = false; }).catch(() => {});
     document.getElementById('y').textContent = new Date().getFullYear();
     const root = document.documentElement;
     try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
