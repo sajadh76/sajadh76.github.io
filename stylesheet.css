@@ -44,8 +44,9 @@ h3 { font-size: 1.08rem; margin: 0 0 4px; line-height: 1.4; }
 .hero-text > p:not(.role) { text-align: justify; hyphens: auto; }
 .role { color: var(--muted); margin: 0 0 16px; }
 .portrait { width: 210px; height: 260px; object-fit: cover; object-position: center 25%; border-radius: 12px; border: 1px solid var(--line); margin-right: 28px; }
-.contact { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.contact a { display: inline-block; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }
+.contact { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.ico { width: 1em; height: 1em; vertical-align: -0.125em; }
+.contact a { display: inline-block; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }
 .contact a:hover { border-color: var(--accent); text-decoration: none; }
 
 .note { color: var(--muted); font-size: 14px; }
@@ -89,11 +90,13 @@ footer.wrap { color: var(--muted); font-size: 13px; padding: 24px 20px; text-ali
 .back + h2 { margin-top: 12px; }
 
 @media (max-width: 640px) {
+  .contact a span { display: none; }
+  .contact a { padding: 6px 10px; }
+  .contact i, .contact .ico { margin: 0; }
   .hero { flex-direction: column; text-align: center; padding-top: 32px; }
   .hero .portrait { order: -1; }
   .rail { flex-direction: row; flex-wrap: wrap; order: 2; justify-content: center; }
   .rail a { width: 100px; }
-  .contact { justify-content: center; }
   .hero-text > p:not(.role) { text-align: left; }
   .portrait { width: 160px; height: 200px; margin-right: 0; }
   .links { gap: 14px; overflow-x: auto; max-width: 100%; }

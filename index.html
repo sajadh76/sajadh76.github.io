@@ -12,13 +12,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#about">Sajad Hamzenejadi</a>
+      <ul class="contact">
+        <li><a title="Email" aria-label="Email" href="mailto:sajad.hamzenejadi@unige.ch"><i class="fa-solid fa-envelope"></i> <span>Email</span></a></li>
+        <li><a title="Scholar" aria-label="Scholar" href="https://scholar.google.com/citations?user=KvSyQNEAAAAJ&hl=en"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg> <span>Scholar</span></a></li>
+        <li><a title="GitHub" aria-label="GitHub" href="https://github.com/sajadh76"><i class="fa-brands fa-github"></i> <span>GitHub</span></a></li>
+        <li><a title="LinkedIn" aria-label="LinkedIn" href="https://www.linkedin.com/in/sajadh76/"><i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span></a></li>
+        <!-- Upload your CV as cv.pdf in the repo root; the button appears automatically once it exists. -->
+        <li id="cv-item" hidden><a title="CV" aria-label="CV" href="cv.pdf"><i class="fa-solid fa-file-lines"></i> <span>CV</span></a></li>
+      </ul>
       <div class="links">
         <button id="theme" aria-label="Toggle dark mode">◐</button>
       </div>
@@ -49,14 +55,6 @@
           with a focus on <strong>privacy-preserving machine learning</strong>, and <strong>federated learning</strong>.
           Recently, I have also started exploring <strong>federated foundation models</strong>, their security, and optimization.
         </p>
-        <ul class="contact">
-          <li><a href="mailto:sajad.hamzenejadi@unige.ch"><i class="fa-solid fa-envelope"></i> Email</a></li>
-          <li><a href="https://scholar.google.com/citations?user=KvSyQNEAAAAJ&hl=en"><i class="ai ai-google-scholar"></i> Scholar</a></li>
-          <li><a href="https://github.com/sajadh76"><i class="fa-brands fa-github"></i> GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/sajadh76/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-          <!-- Upload your CV as cv.pdf in the repo root; the button appears automatically once it exists. -->
-          <li id="cv-item" hidden><a href="cv.pdf"><i class="fa-solid fa-file-lines"></i> CV</a></li>
-        </ul>
       </div>
       <img class="portrait" src="images/Sajad Hamzenejadi.jpg" alt="Portrait of Sajad Hamzenejadi">
     </section>
