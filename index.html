@@ -31,6 +31,8 @@
         <a href="#publications"><i class="fa-solid fa-book-open"></i><span>Publications</span></a>
         <a href="#education"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
         <a href="#experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a>
+        <a href="#service"><i class="fa-solid fa-users"></i><span>Academic Service</span></a>
+        <a href="#cv"><i class="fa-solid fa-file-lines"></i><span>CV</span></a>
       </nav>
       <div class="hero-text">
         <h1>Sajad Hamzenejadi</h1>
@@ -112,7 +114,6 @@
     <section id="education" class="tab">
       <a class="back" href="#about"><i class="fa-solid fa-arrow-left"></i> Home</a>
       <h2>Education</h2>
-      <!-- Logos: add images/logos/unige.webp, polimi.png, bell-labs.webp (square, ~200px). Until then initials are shown. -->
       <ul class="timeline">
         <li><span class="logo"><img src="images/unige.webp" alt="" onerror="this.remove()"><span>UNIGE</span></span><div>
           <div class="row"><strong>PhD in Information Systems</strong><span class="when">YYYY – present</span></div>
@@ -123,6 +124,10 @@
           <div class="row"><strong>MSc in Telecommunications Engineering</strong><span class="when">YYYY – YYYY</span></div>
           <div class="where">Politecnico di Milano, Italy</div>
           <p class="desc">Thesis: <em>Thesis title</em>.</p>
+        </div></li>
+        <li><span class="logo"><img src="images/lyon.webp" alt="" onerror="this.remove()"><span>Lyon</span></span><div>
+          <div class="row"><strong>Exchange Student</strong><span class="when">YYYY – YYYY</span></div>
+          <div class="where">University of Lyon, France</div>
         </div></li>
       </ul>
     </section>
@@ -143,12 +148,37 @@
         </div></li>
       </ul>
     </section>
+
+    <section id="service" class="tab">
+      <a class="back" href="#about"><i class="fa-solid fa-arrow-left"></i> Home</a>
+      <h2>Academic Service</h2>
+      <!-- Placeholder entries: replace with your real service. -->
+      <h3 class="sub">Reviewer</h3>
+      <ul class="plain">
+        <li>Conference / Journal name (YYYY)</li>
+      </ul>
+      <h3 class="sub">Teaching Assistant</h3>
+      <ul class="plain">
+        <li>Course name, University of Geneva (YYYY)</li>
+      </ul>
+    </section>
+
+    <section id="cv" class="tab">
+      <a class="back" href="#about"><i class="fa-solid fa-arrow-left"></i> Home</a>
+      <h2>Curriculum Vitae</h2>
+      <!-- Upload your CV as cv.pdf in the repo root; it will be shown here automatically. -->
+      <p id="cv-missing" class="note">My CV will be available here soon.</p>
+      <div id="cv-ok" hidden>
+        <p><a class="btn" href="cv.pdf" target="_blank"><i class="fa-solid fa-download"></i> Download CV (PDF)</a></p>
+        <iframe class="cv-frame" src="about:blank" title="CV"></iframe>
+      </div>
+    </section>
   </main>
 
   <footer class="wrap">© <span id="y"></span> Sajad Hamzenejadi</footer>
 
   <script>
-    const tabs = ['about', 'publications', 'education', 'experience'];
+    const tabs = ['about', 'publications', 'education', 'experience', 'service', 'cv'];
     function showTab() {
       const id = tabs.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about';
       document.querySelectorAll('.tab').forEach(s => s.hidden = s.id !== id);
@@ -157,7 +187,13 @@
     }
     addEventListener('hashchange', showTab);
     showTab();
-    fetch('cv.pdf', { method: 'HEAD' }).then(r => { if (r.ok) document.getElementById('cv-item').hidden = false; }).catch(() => {});
+    fetch('cv.pdf', { method: 'HEAD' }).then(r => {
+      if (!r.ok) return;
+      document.getElementById('cv-item').hidden = false;
+      document.getElementById('cv-missing').hidden = true;
+      document.getElementById('cv-ok').hidden = false;
+      document.querySelector('.cv-frame').src = 'cv.pdf';
+    }).catch(() => {});
     document.getElementById('y').textContent = new Date().getFullYear();
     const root = document.documentElement;
     try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
