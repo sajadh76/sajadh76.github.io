@@ -94,7 +94,8 @@ p { margin: 0 0 16px; }
 
 .plain { list-style: none; padding: 0; margin: 0; }
 .plain { border-top: 1px solid var(--line); padding-top: 4px; }
-.plain li { padding: 8px 0; }
+.plain li { padding: 8px 0 8px 22px; position: relative; }
+.plain li::before { content: ""; position: absolute; left: 4px; top: 19px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
 .plain .item { display: block; font-weight: 500; color: var(--fg); }
 .plain .detail { display: block; color: var(--muted); font-size: 15.5px; }
 .plain .sep { color: var(--gold); margin: 0 4px; font-weight: 400; }
