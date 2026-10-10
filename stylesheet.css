@@ -79,13 +79,6 @@ h3 { font-size: 1.08rem; margin: 0 0 4px; line-height: 1.4; }
 main { flex: 1; width: 100%; padding-bottom: 72px; }
 footer.wrap { color: var(--muted); font-size: 13px; padding: 24px 20px; text-align: center; border-top: 1px solid var(--line); width: 100%; max-width: none; }
 
-.affil { display: flex; align-items: center; gap: 10px 18px; flex-wrap: wrap; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
-.affil-label { width: 100%; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.affil a { display: block; background: #fff; border-radius: 6px; padding: 4px 8px; }
-.affil img { height: 34px; width: auto; max-width: 120px; object-fit: contain; display: block;
-  filter: grayscale(1); opacity: .7; transition: .2s; }
-.affil a:hover img { filter: none; opacity: 1; }
-
 .rail { display: flex; flex-direction: column; gap: 14px; align-self: center; }
 .rail a { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 96px; padding: 14px 6px;
   border: 1px solid var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; font-weight: 500; transition: .15s; }
@@ -99,8 +92,7 @@ footer.wrap { color: var(--muted); font-size: 13px; padding: 24px 20px; text-ali
   .hero .portrait { order: -1; }
   .rail { flex-direction: row; order: 2; justify-content: center; }
   .rail a { width: 100px; }
-  .contact, .affil { justify-content: center; }
-  .affil-label { width: 100%; }
+  .contact { justify-content: center; }
   .portrait { width: 160px; height: 160px; }
   .links { gap: 14px; overflow-x: auto; max-width: 100%; }
   .links a { font-size: 14px; white-space: nowrap; }
