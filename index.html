@@ -26,6 +26,7 @@
         <a href="#education"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /> </svg>Education</a>
         <a href="#experience"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /> <rect width="20" height="14" x="2" y="6" rx="2" /> </svg>Experience</a>
         <a href="#service"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> </svg>Academic Services</a>
+        <a href="#certificates"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /> <circle cx="12" cy="8" r="6" /> </svg>Certificates</a>
         <a href="#cv"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg>Curriculum Vitae</a>
     </nav>
     <div class="social">
@@ -205,6 +206,56 @@
 
       </section>
 
+      <!-- Certificates -->
+      <section id="certificates" class="page" hidden>
+        <h2>Certificates</h2>
+        <div class="filters" role="tablist" aria-label="Filter certificates">
+          <button type="button" class="on" data-filter="all">All</button>
+          <button type="button" data-filter="ai">AI / ML</button>
+          <button type="button" data-filter="security">Security</button>
+          <button type="button" data-filter="dev">Development</button>
+          <button type="button" data-filter="mgmt">Management &amp; Leadership</button>
+        </div>
+        <div class="certs">
+          <!-- Cryptography I: the uploaded Crypto.pdf currently contains the Deep Learning certificate.
+               Once the correct file is uploaded, generate images/certificates/crypto.jpg and crypto-thumb.jpg and uncomment.
+          <figure class="cert" data-domain="security" data-full="images/certificates/crypto.jpg" data-pdf="Certificates/Crypto.pdf">
+            <button type="button" class="frame"><img src="images/certificates/crypto-thumb.jpg" alt="Cryptography I certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Cryptography I</span><span class="cm">Issuer · Date</span></figcaption>
+          </figure>
+          -->
+          <figure class="cert" data-domain="dev" data-full="images/certificates/mlops.jpg" data-pdf="Certificates/Mlops.pdf">
+            <button type="button" class="frame" aria-label="View MLOps | Machine Learning Operations Professional Certificate certificate"><img src="images/certificates/mlops-thumb.jpg" alt="MLOps | Machine Learning Operations Professional Certificate certificate" loading="lazy"></button>
+            <figcaption><span class="ct">MLOps | Machine Learning Operations Professional Certificate</span><span class="cm">Duke University · Coursera · Nov 2024</span></figcaption>
+          </figure>
+          <figure class="cert" data-domain="dev" data-full="images/certificates/automation.jpg" data-pdf="Certificates/Automation.pdf">
+            <button type="button" class="frame" aria-label="View Google IT Automation with Python Professional Certificate certificate"><img src="images/certificates/automation-thumb.jpg" alt="Google IT Automation with Python Professional Certificate certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Google IT Automation with Python Professional Certificate</span><span class="cm">Google · Coursera · Mar 2023</span></figcaption>
+          </figure>
+          <figure class="cert" data-domain="ai" data-full="images/certificates/deep-learning.jpg" data-pdf="Certificates/Deep%20learning.pdf">
+            <button type="button" class="frame" aria-label="View Neural Networks and Deep Learning certificate"><img src="images/certificates/deep-learning-thumb.jpg" alt="Neural Networks and Deep Learning certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Neural Networks and Deep Learning</span><span class="cm">DeepLearning.AI · Coursera · Apr 2019</span></figcaption>
+          </figure>
+          <figure class="cert" data-domain="ai" data-full="images/certificates/human-ai.jpg" data-pdf="Certificates/Human-ai.pdf">
+            <button type="button" class="frame" aria-label="View Human-AI Collaboration certificate"><img src="images/certificates/human-ai-thumb.jpg" alt="Human-AI Collaboration certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Human-AI Collaboration</span><span class="cm">CUSO Winter School · Jan 2025</span></figcaption>
+          </figure>
+          <figure class="cert" data-domain="mgmt" data-full="images/certificates/agile.jpg" data-pdf="Certificates/Agile.pdf">
+            <button type="button" class="frame" aria-label="View Agile Leadership Professional Certificate certificate"><img src="images/certificates/agile-thumb.jpg" alt="Agile Leadership Professional Certificate certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Agile Leadership Professional Certificate</span><span class="cm">University of Colorado · Coursera · Nov 2024</span></figcaption>
+          </figure>
+          <figure class="cert" data-domain="mgmt" data-full="images/certificates/negotiation.jpg" data-pdf="Certificates/Negotiation.pdf">
+            <button type="button" class="frame" aria-label="View Negotiation: Strategies and Skills certificate"><img src="images/certificates/negotiation-thumb.jpg" alt="Negotiation: Strategies and Skills certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Negotiation: Strategies and Skills</span><span class="cm">University of Michigan · Coursera · Aug 2024</span></figcaption>
+          </figure>
+          <figure class="cert" data-domain="mgmt" data-full="images/certificates/strategic.jpg" data-pdf="Certificates/Strategic.pdf">
+            <button type="button" class="frame" aria-label="View Strategic Management certificate"><img src="images/certificates/strategic-thumb.jpg" alt="Strategic Management certificate" loading="lazy"></button>
+            <figcaption><span class="ct">Strategic Management</span><span class="cm">Copenhagen Business School · Coursera · Jul 2024</span></figcaption>
+          </figure>
+        </div>
+        <p class="empty note" hidden>More certificates in this area coming soon.</p>
+      </section>
+
       <!-- CV -->
       <section id="cv" class="page" hidden>
         <h2>Curriculum Vitae</h2>
@@ -220,6 +271,20 @@
     <footer>© <span id="y"></span> Sajad Hamzenejadi. All rights reserved.</footer>
   </div>
 
+  <!-- Certificate viewer -->
+  <div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Certificate">
+    <figure>
+      <img alt="">
+      <figcaption>
+        <span class="lb-title"></span>
+        <span class="lb-actions">
+          <a class="btn lb-pdf" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /> </svg>Open PDF</a>
+          <button type="button" class="btn lb-close"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Close</button>
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+
   <script>
     const pages = [...document.querySelectorAll('.page')].map(s => s.id);
     function show() {
@@ -229,6 +294,31 @@
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
     addEventListener('hashchange', show);
+    addEventListener('load', () => window.scrollTo({ top: 0, behavior: 'instant' }));
+    // Certificates: domain filters and full-size viewer
+    const certs = [...document.querySelectorAll('.cert')];
+    document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('on', x === b));
+      const f = b.dataset.filter;
+      let shown = 0;
+      certs.forEach(c => { const ok = f === 'all' || c.dataset.domain === f; c.hidden = !ok; shown += ok; });
+      document.querySelector('#certificates .empty').hidden = shown > 0;
+    }));
+    const lb = document.querySelector('.lightbox');
+    const closeLb = () => { lb.hidden = true; document.body.style.overflow = ''; };
+    certs.forEach(c => c.querySelector('.frame').addEventListener('click', () => {
+      lb.querySelector('img').src = c.dataset.full;
+      lb.querySelector('img').alt = c.querySelector('img').alt;
+      lb.querySelector('.lb-title').textContent = c.querySelector('.ct').textContent;
+      lb.querySelector('.lb-pdf').href = c.dataset.pdf;
+      lb.hidden = false; document.body.style.overflow = 'hidden';
+      lb.querySelector('.lb-close').focus();
+    }));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    lb.querySelector('.lb-close').addEventListener('click', closeLb);
+    addEventListener('keydown', e => { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+    addEventListener('hashchange', closeLb);
+
     show();
     document.getElementById('theme').addEventListener('click', () => {
       const root = document.documentElement;
