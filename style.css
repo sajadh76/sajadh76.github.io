@@ -193,3 +193,9 @@ body, .side, .tools a, .tools button { transition: background-color .35s, color 
   .certs { grid-template-columns: 1fr; }
   .lightbox { padding: 14px; }
 }
+
+/* Collaboration note (About page) */
+.collab { display: flex; align-items: center; gap: 18px; margin-top: 40px; padding: 18px 22px;
+  border: 1px solid var(--line); border-left: 3px solid var(--gold); background: rgba(156, 122, 60, .06); }
+.collab-icon { width: 30px; height: 30px; flex: none; color: var(--gold); }
+.collab p { margin: 0; color: var(--fg); }
